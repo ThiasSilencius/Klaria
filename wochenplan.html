@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Klara-Weg – Dein Wochenplan</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { color-scheme: light; }
+  html { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+  body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+  .check { appearance: none; width: 1.5rem; height: 1.5rem; border: 2px solid #d4d4d8; border-radius: 9999px; margin-top: 0.15rem; flex-shrink: 0; display: grid; place-items: center; transition: all .18s ease; cursor: pointer; }
+  .check:checked { background: #18181b; border-color: #18181b; }
+  .check:checked::after { content: ''; width: 0.45rem; height: 0.45rem; background: white; border-radius: 9999px; }
+  .check:focus-visible { outline: 2px solid #18181b; outline-offset: 2px; }
+  .check:checked ~ div p { text-decoration-line: line-through; color: #a1a1aa; }
+  .card { scroll-margin-top: 1.5rem; }
+  @media (prefers-reduced-motion: no-preference) {
+    .fade { animation: fade .5s ease both; }
+    .fade:nth-child(1){animation-delay:.02s} .fade:nth-child(2){animation-delay:.06s} .fade:nth-child(3){animation-delay:.10s} .fade:nth-child(4){animation-delay:.14s} .fade:nth-child(5){animation-delay:.18s} .fade:nth-child(6){animation-delay:.22s} .fade:nth-child(7){animation-delay:.26s}
+    @keyframes fade { from { opacity:0; transform: translateY(6px) } to { opacity:1; transform: none } }
+  }
+</style>
+</head>
+<body class="bg-white text-zinc-900">
+  <div class="max-w-[820px] mx-auto px-5 sm:px-8 py-10 sm:py-16">
+    <header class="text-center">
+      <h1 class="text-[38px] sm:text-[56px] leading-[1.05] font-semibold tracking-tight">Klara-Weg – Dein Wochenplan</h1>
+      <p class="mt-3 text-[14px] sm:text-[15px] tracking-wide text-zinc-500 uppercase">Nicht Ego verbessern. Grenze spüren. Körper vertrauen. Einheit leben.</p>
+    </header>
+
+    <!-- Tägliches Fundament -->
+    <section class="mt-10 sm:mt-14">
+      <div class="bg-white border border-zinc-200 rounded-[28px] p-6 sm:p-8 shadow-sm">
+        <div class="flex items-start justify-between gap-4">
+          <h2 class="text-[24px] sm:text-[28px] font-semibold tracking-tight leading-snug">Tägliches Fundament – Meditation 2×10 Minuten</h2>
+          <span class="mt-1 hidden sm:inline-flex items-center rounded-full bg-zinc-900 text-white px-2.5 py-1 text-[11px] font-medium tracking-wide">TÄGLICH</span>
+        </div>
+        
+        <div class="mt-6 grid sm:grid-cols-2 gap-7 sm:gap-10">
+          <div>
+            <div class="text-[11px] font-semibold tracking-[0.14em] text-zinc-500 mb-3">MORGENS, DIREKT NACH DEM AUFWACHEN</div>
+            <ul class="space-y-3">
+              <li class="flex gap-3">
+                <span class="mt-2 h-1.5 w-1.5 rounded-full bg-zinc-900 flex-shrink-0"></span>
+                <p class="text-[16px] sm:text-[17px] leading-[1.65] text-zinc-800"><span class="font-medium">5 Minuten Denken:</span> in Dankbarkeit und Demut. Frage: Was bringt mir der Tag. Wovor habe ich Angst. Was wäre das Schlimmste, was mir heute passiert.</p>
+              </li>
+              <li class="flex gap-3">
+                <span class="mt-2 h-1.5 w-1.5 rounded-full bg-zinc-900 flex-shrink-0"></span>
+                <p class="text-[16px] sm:text-[17px] leading-[1.65] text-zinc-800"><span class="font-medium">5 Minuten völlige Ruhe</span></p>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div class="text-[11px] font-semibold tracking-[0.14em] text-zinc-500 mb-3">ABENDS, VOR DEM SCHLAFEN</div>
+            <ul class="space-y-3">
+              <li class="flex gap-3">
+                <span class="mt-2 h-1.5 w-1.5 rounded-full bg-zinc-900 flex-shrink-0"></span>
+                <p class="text-[16px] sm:text-[17px] leading-[1.65] text-zinc-800"><span class="font-medium">5 Minuten Denken:</span> in Dankbarkeit und Reflektieren. Frage: Was habe ich erlebt. Kann ich daraus lernen. Gehört es mir.</p>
+              </li>
+              <li class="flex gap-3">
+                <span class="mt-2 h-1.5 w-1.5 rounded-full bg-zinc-900 flex-shrink-0"></span>
+                <p class="text-[16px] sm:text-[17px] leading-[1.65] text-zinc-800"><span class="font-medium">5 Minuten völlige Ruhe</span></p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-zinc-100">
+          <h3 class="text-[22px] sm:text-[24px] font-semibold tracking-tight">Atemübung (die zweiten 5 Minuten)</h3>
+          <div class="text-[11px] font-semibold tracking-[0.14em] text-zinc-500 mt-1.5 mb-5">BEWUSSTE ATEMPAUSE UND KÖRPER SPÜREN</div>
+          
+          <div class="grid sm:grid-cols-2 gap-6 sm:gap-10">
+            <div>
+              <div class="text-[11px] font-semibold tracking-[0.14em] text-zinc-500 mb-2.5">Erste 5 Minuten: Gedanken spüren</div>
+              <p class="text-[15px] sm:text-[16px] leading-[1.7] text-zinc-700">Atme im Rhythmus 8–4–8. Spüre deine Gedanken, benenne sie still für dich. Bleib beim Atem. In dieser Phase konzentrierst du dich nicht auf Chakren oder Körperstellen.</p>
+            </div>
+            <div>
+              <div class="text-[11px] font-semibold tracking-[0.14em] text-zinc-500 mb-2.5">Zweite 5 Minuten: Körper fühlen</div>
+              <p class="text-[15px] sm:text-[16px] leading-[1.7] text-zinc-700">Atme weiter im Rhythmus 8–4–8. Jetzt wandere mit der Aufmerksamkeit durch den Körper. Konzentriere dich auf deine Chakren oder spüre einfach, wo Energie fließt. Wenn das Wort Chakra dich stresst, ignoriere es. Hand aufs Brustbein reicht. Wenn du nicht weißt, wo du beginnen sollst, lege eine Hand auf das Brustbein und spüre ihn einfach. Du musst nicht nur im Körper bleiben, du kannst auch Geräusche, Gerüche oder das, was um dich ist, wahrnehmen. Probier es aus, variiere. Hauptsache du greifst keinen Gedanken auf. Wenn ein Gedanke kommt, kehre sanft zurück ins Innen oder ins Außen. So bleiben Gedanken fern. Es geht nicht um perfektes Atmen, es geht um Bewusstheit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-6 flex items-center justify-center gap-5 text-[13px]">
+        <button id="today" class="underline underline-offset-4 decoration-zinc-300 hover:decoration-zinc-900 text-zinc-600 hover:text-zinc-900 transition">Heute anzeigen</button>
+        <span class="text-zinc-300">·</span>
+        <button id="reset" class="underline underline-offset-4 decoration-zinc-300 hover:decoration-zinc-900 text-zinc-600 hover:text-zinc-900 transition">Woche zurücksetzen</button>
+      </div>
+    </section>
+
+    <div class="mt-14 sm:mt-20">
+      <h2 class="text-[28px] sm:text-[36px] font-semibold tracking-tight leading-snug text-center">Dein Wochenplan – Taten für die Seele</h2>
+      <p class="mt-4 text-[16px] sm:text-[17px] leading-[1.7] text-zinc-700 text-center max-w-[680px] mx-auto">Außen oder Innen, du wählst täglich neu. Keine Woche muss gleich sein. Mal außen, mal innen, mal beides. Es gibt kein Richtig, kein Falsch. Nur Tun, ohne Zwang.</p>
+    </div>
+
+    <main class="mt-8 sm:mt-10 space-y-5 sm:space-y-6">
+
+      <!-- Montag -->
+      <section id="montag" data-day="1" class="card fade bg-white border border-zinc-200 rounded-[28px] p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow">
+        <div class="flex items-start justify-between">
+          <h2 class="text-[30px] sm:text-[36px] font-semibold tracking-tight leading-none">Montag</h2>
+          <span data-progress class="mt-1 inline-flex items-center rounded-full bg-zinc-100 px-2.5 py-1 text-[12px] font-medium text-zinc-600 transition-colors">0/3</span>
+        </div>
+        <div class="mt-5 divide-y divide-zinc-100">
+          <label class="flex items-start gap-4 py-4 cursor-pointer">
+            <input type="checkbox" data-key="klaraweg-mo-mental" class="check">
+            <div class="min-w-0 flex-1">
+              <div class="text-[11px] font-semibold tracking-[0.14em] text-zinc-500 mb-1.5">MENTAL — GEBOT 1: URSPRUNG – GIB OHNE FORDERUNG</div>
+              <p class="text-[18px] sm:text-[19px] leading-[1.6] text-zinc-800 transition-colors"><span class="font-semibold">Außen:</span> Gib heute jemandem etwas, ohne etwas zurück zu wollen. Ein Lächeln, Zeit, ein offenes Ohr.</p>
+              <p class="mt-2 text-[18px] sm:text-[19px] leading-[1.6] text-zinc-800 transition-colors"><span class="font-semibold">Innen:</span> Schenk dir selbst etwas, das du dir sonst verwehrst. 5 Minuten nur für dich, ohne Rechtfertigung.</p>
+              <div class="mt-2 text-[14px] sm:text-[15px] leading-[1.5] text-zinc-500">Erinnerung: Selbstliebe ist die erste Urkraft.</div>
+            </div>
+          </label>
+          <label class="flex items-start gap-4 py-4 cursor-pointer">
+            <input type="checkbox" data-key="klaraweg-mo-korper" class="check">
+            <div class="min-w-0 flex-1">
+              <div class="text-[11px] font-semibold tracking-[0.14em] text-zinc-500 mb-1.5">KÖRPERLICH</div>
+              <p class="text-[18px] sm:text-[19px] leading-[1.6] text-zinc-800 transition-colors">Wähle deine Bewegung, Fahrrad, Laufen, Fitness, Homeworkout, Schwimmen oder anderes. Übe nicht für das Ego. Spüre währenddessen die Grenze deines Körpers. Vertraue dem Signal. Werde besser im Wahrnehmen, nicht im Besiegen.</p>
+              <p class="mt-3 text-[14px] sm:text-[15px] leading-[1.6] text-zinc-600">Wichtig: Keine Überforderung. Wenn du heute nur einen Finger bewusst bewegen kannst, dann ist das deine Grenze. Spüre sie. Wenn du eine Muskelgruppe nur anspannen kannst, ohne Bewegung, dann ist das deine Übung. Wer körperlich gar nicht kann, übt die mentale Präsenz in der Vorstellung. Steigere nicht die Leistung. Steigere die Wahrnehmung.</p>
+            </div>
+          </label>
+          <label class="flex items-start gap-4 py-4 cursor-pointer">
+            <input type="checkbox" data-key="klaraweg-mo-geist" class="check">
+            <div class="min-w-0 flex-1">
+              <div class="text-[11px] font-semibold tracking-[0.14em] text-zinc-500 mb-1.5">GEISTIG</div>
+              <p class="text-[18px] sm:text-[19px] leading-[1.6] text-zinc-800 transition-colors">Wähle frei: Lesen, Schreiben, Rechnen oder ein Thema aus Wissenschaft und Technik. 15 Minuten ohne Ziel zu glänzen. Trainiere Klarheit.</p>
+            </div>
+          </label>
+        </div>
+      </section>
+
+      <!-- Dienstag -->
+      <section id="dienstag" data-day="2" class="card fade bg-white border border-zinc-200 rounded-[28px] p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow">
+        <div class="flex items-start justify-between">
+          <h2 class="text-[30px] sm:text-[36px] font-semibold tracking-tight leading-none">Dienstag</h2>
+          <span data-progress class="mt-1 inline-flex items-center rounded-full bg-zinc-100 px-2.5 py-1 text-[12px] font-medium text-zinc-600 transition-colors">0/3</span>
+        </div>
+        <div class="mt-5 divide-y divide-zinc-100">
+          <label class="flex items-start gap-4 py-4 cursor-pointer">
+            <input type="checkbox" data-key="klaraweg-di-mental" class="check">
+            <div class="min-w-0 flex-1">
+              <div class="text-[11px] font-semibold tracking-[0.14em] text-zinc-500 mb-1.5">MENTAL — GEBOT 2: INNERE ACHSE – UNEIGENNÜTZIG HANDELN</div>
+              <p class="text-[18px] sm:text-[19px] leading-[1.6] text-zinc-800"><span class="font-semibold">Außen:</span> Hilf einem Freund oder Verwandten bei einer Sache. Erzähl es niemandem.</p>
+              <p class="mt-2 text-[18px] sm:text-[19px] leading-[1.6] text-zinc-800"><span class="font-semibold">Innen:</span> Erledige eine Sache für dein zukünftiges Ich, die du sonst aufschiebst. Ohne es zu dokumentieren.</p>
+              <div class="mt-2 text-[14px] sm:text-[15px] leading-[1.5] text-zinc-500">Erinnerung: Der Sinn ist der Weg, den wir hinterlassen.</div>
+            </div>
+          </label>
+          <label class="flex items-start gap-4 py-4 cursor-pointer">
+            <input type="checkbox" data-key="klaraweg-di-korper" class="check">
+            <div class="min-w-0 flex-1">
+              <div class="text-[11px] font-semibold tracking-[0.14em] text-zinc-500 mb-1.5">KÖRPERLICH</div>
+              <p class="text-[18px] sm:text-[19px] leading-[1.6] text-zinc-800">Wie Montag – freie Wahl.</p>
+            </div>
+          </label>
+          <label class="flex items-start gap-4 py-4 cursor-pointer">
+            <input type="checkbox" data-key="klaraweg-di-geist" class="check">
+            <div class="min-w-0 flex-1">
+              <div class="text-[11px] font-semibold tracking-[0.14em] text-zinc-500 mb-1.5">GEISTIG</div>
+              <p class="text-[18px] sm:text-[19px] leading-[1.6] text-zinc-800">Wie Montag – freie Wahl.</p>
+            </div>
+          </label>
+        </div>
+      </section>
+
+      <!-- Mittwoch -->
+      <section id="mittwoch" data-day="3" class="card fade bg-white border border-zinc-200 rounded-[28px] p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow">
+        <div class="flex items-start justify-between">
+          <h2 class="text-[30px] sm:text-[36px] font-semibold tracking-tight leading-none">Mittwoch</h2>
+          <span data-progress class="mt-1 inline-flex items-center rounded-full bg-zinc-100 px-2.5 py-1 text-[12px] font-medium text-zinc-600 transition-colors">0/3</span>
+        </div>
+        <div class="mt-5 divide-y divide-zinc-100">
+          <label class="flex items-start gap-4 py-4 cursor-pointer">
+            <input type="checkbox" data-key="klaraweg-mi-mental" class="check">
+            <div class="min-w-0 flex-1">
+              <div class="text-[11px] font-semibold tracking-[0.14em] text-zinc-500 mb-1.5">MENTAL — GEBOT 3: PHYSIOLOGISCHER FRIEDEN – ECHTE PAUSE</div>
+              <p class="text-[18px] sm:text-[19px] leading-[1.6] text-zinc-800"><span class="font-semibold">Außen:</span> Schenk dir und einer anderen Person 10 Minuten Pause ohne Handy, ohne Ziel. Nur da sein.</p>
+              <p class="mt-2 text-[18px] sm:text-[19px] leading-[1.6] text-zinc-800"><span class="font-semibold">Innen:</span> Geh 10 Minuten raus ohne Ziel, ohne Handy, ohne Podcast. Nur da sein. Die Pause gilt.</p>
+              <div class="mt-2 text-[14px] sm:text-[15px] leading-[1.5] text-zinc-500">Erinnerung: Dein Körper signalisiert Wahrheit vor dem Verstand.</div>
+            </div>
+          </label>
+          <label class="flex items-start gap-4 py-4 cursor-pointer">
+            <input type="checkbox" data-key="klaraweg-mi-korper" class="check">
+            <div class="min-w-0 flex-1">
+              <div class="text-[11px] font-semibold tracking-[0.14em] text-zinc-500 mb-1.5">KÖRPERLICH</div>
+              <p class="text-[18px] sm:text-[19px] leading-[1.6] text-zinc-800">Wie Montag – freie Wahl.</p>
+            </div>
+          </label>
+          <label class="flex items-start gap-4 py-4 cursor-pointer">
+            <input type="checkbox" data-key="klaraweg-mi-geist" class="check">
+            <div class="min-w-0 flex-1">
+              <div class="text-[11px] font-semibold tracking-[0.14em] text-zinc-500 mb-1.5">GEISTIG</div>
+              <p class="text-[18px] sm:text-[19px] leading-[1.6] text-zinc-800">Wie Montag – freie Wahl.</p>
+            </div>
+          </label>
+        </div>
+      </section>
+
+      <!-- Donnerstag -->
+      <section id="donnerstag" data-day="4" class="card fade bg-white border border-zinc-200 rounded-[28px] p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow">
+        <div class="flex items-start justify-between">
+          <h2 class="text-[30px] sm:text-[36px] font-semibold tracking-tight leading-none">Donnerstag</h2>
+          <span data-progress class="mt-1 inline-flex items-center rounded-full bg-zinc-100 px-2.5 py-1 text-[12px] font-medium text-zinc-600 transition-colors">0/3</span>
+        </div>
+        <div class="mt-5 divide-y divide-zinc-100">
+          <label class="flex items-start gap-4 py-4 cursor-pointer">
+            <input type="checkbox" data-key="klaraweg-do-mental" class="check">
+            <div class="min-w-0 flex-1">
+              <div class="text-[11px] font-semibold tracking-[0.14em] text-zinc-500 mb-1.5">MENTAL — GEBOT 4: MASSVOLLER KONSUM – BEWUSST ABGEBEN</div>
+              <p class="text-[18px] sm:text-[19px] leading-[1.6] text-zinc-800"><span class="font-semibold">Außen:</span> Gib bewusst etwas ab, das du nicht mehr brauchst. Kein Tausch, kein Lob.</p>
+              <p class="mt-2 text-[18px] sm:text-[19px] leading-[1.6] text-zinc-800"><span class="font-semibold">Innen:</span> Trenne dich von einem Gedanken, der dir nicht dient. Schreib ihn auf, dann lass ihn los.</p>
+              <div class="mt-2 text-[14px] sm:text-[15px] leading-[1.5] text-zinc-500">Erinnerung: Maß ist Befreiung von Fremdbestimmung.</div>
+            </div>
+          </label>
+          <label class="flex items-start gap-4 py-4 cursor-pointer">
+            <input type="checkbox" data-key="klaraweg-do-korper" class="check">
+            <div class="min-w-0 flex-1">
+              <div class="text-[11px] font-semibold tracking-[0.14em] text-zinc-500 mb-1.5">KÖRPERLICH</div>
+              <p class="text-[18px] sm:text-[19px] leading-[1.6] text-zinc-800">Wie Montag – freie Wahl.</p>
+            </div>
+          </label>
+          <label class="flex items-start gap-4 py-4 cursor-pointer">
+            <input type="checkbox" data-key="klaraweg-do-geist" class="check">
+            <div class="min-w-0 flex-1">
+              <div class="text-[11px] font-semibold tracking-[0.14em] text-zinc-500 mb-1.5">GEISTIG</div>
+              <p class="text-[18px] sm:text-[19px] leading-[1.6] text-zinc-800">Wie Montag – freie Wahl.</p>
+            </div>
+          </label>
+        </div>
+      </section>
+
+      <!-- Freitag -->
+      <section id="freitag" data-day="5" class="card fade bg-white border border-zinc-200 rounded-[28px] p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow">
+        <div class="flex items-start justify-between">
+          <h2 class="text-[30px] sm:text-[36px] font-semibold tracking-tight leading-none">Freitag</h2>
+          <span data-progress class="mt-1 inline-flex items-center rounded-full bg-zinc-100 px-2.5 py-1 text-[12px] font-medium text-zinc-600 transition-colors">0/3</span>
+        </div>
+        <div class="mt-5 divide-y divide-zinc-100">
+          <label class="flex items-start gap-4 py-4 cursor-pointer">
+            <input type="checkbox" data-key="klaraweg-fr-mental" class="check">
+            <div class="min-w-0 flex-1">
+              <div class="text-[11px] font-semibold tracking-[0.14em] text-zinc-500 mb-1.5">MENTAL — GEBOT 5: PHYSISCHE FESTUNG – KÖRPER EHREN</div>
+              <p class="text-[18px] sm:text-[19px] leading-[1.6] text-zinc-800"><span class="font-semibold">Außen:</span> Tue bewusst etwas Gutes für deinen Körper. Danach teile mit einem Menschen ehrlich, wie es dir damit ging. Nicht um anzugeben, sondern um die Scham zu lassen.</p>
+              <p class="mt-2 text-[18px] sm:text-[19px] leading-[1.6] text-zinc-800"><span class="font-semibold">Innen:</span> Tue bewusst etwas Gutes für deinen Körper. Danach schreib dir einen Satz auf: Heute brauchte mein Körper… Ehrlich, ohne Bewertung.</p>
+              <div class="mt-2 text-[14px] sm:text-[15px] leading-[1.5] text-zinc-500">Erinnerung: Der Beobachter bewertet nicht. Er klärt. Der Körper ist kein Werkzeug fürs Ego.</div>
+            </div>
+          </label>
+          <label class="flex items-start gap-4 py-4 cursor-pointer">
+            <input type="checkbox" data-key="klaraweg-fr-korper" class="check">
+            <div class="min-w-0 flex-1">
+              <div class="text-[11px] font-semibold tracking-[0.14em] text-zinc-500 mb-1.5">KÖRPERLICH</div>
+              <p class="text-[18px] sm:text-[19px] leading-[1.6] text-zinc-800">Wie Montag – freie Wahl.</p>
+            </div>
+          </label>
+          <label class="flex items-start gap-4 py-4 cursor-pointer">
+            <input type="checkbox" data-key="klaraweg-fr-geist" class="check">
+            <div class="min-w-0 flex-1">
+              <div class="text-[11px] font-semibold tracking-[0.14em] text-zinc-500 mb-1.5">GEISTIG</div>
+              <p class="text-[18px] sm:text-[19px] leading-[1.6] text-zinc-800">Wie Montag – freie Wahl.</p>
+            </div>
+          </label>
+        </div>
+      </section>
+
+      <!-- Samstag -->
+      <section id="samstag" data-day="6" class="card fade bg-white border border-zinc-200 rounded-[28px] p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow">
+        <div class="flex items-start justify-between">
+          <h2 class="text-[30px] sm:text-[36px] font-semibold tracking-tight leading-none">Samstag</h2>
+          <span data-progress class="mt-1 inline-flex items-center rounded-full bg-zinc-100 px-2.5 py-1 text-[12px] font-medium text-zinc-600 transition-colors">0/3</span>
+        </div>
+        <div class="mt-5 divide-y divide-zinc-100">
+          <label class="flex items-start gap-4 py-4 cursor-pointer">
+            <input type="checkbox" data-key="klaraweg-sa-mental" class="check">
+            <div class="min-w-0 flex-1">
+              <div class="text-[11px] font-semibold tracking-[0.14em] text-zinc-500 mb-1.5">MENTAL — GEBOT 6: MASKENLOSE SPRACHE – VERANTWORTUNG</div>
+              <p class="text-[18px] sm:text-[19px] leading-[1.6] text-zinc-800"><span class="font-semibold">Außen:</span> Sprich heute ein offenes Danke oder eine echte Entschuldigung aus, die du schon lange vor dir herschiebst.</p>
+              <p class="mt-2 text-[18px] sm:text-[19px] leading-[1.6] text-zinc-800"><span class="font-semibold">Innen:</span> Sprich sie laut zu dir selbst aus. Danke, dass du… oder Es tut mir leid, dass ich… Sag es in den Raum.</p>
+              <div class="mt-2 text-[14px] sm:text-[15px] leading-[1.5] text-zinc-500">Erinnerung: Heilung geschieht durch Verantwortung.</div>
+            </div>
+          </label>
+          <label class="flex items-start gap-4 py-4 cursor-pointer">
+            <input type="checkbox" data-key="klaraweg-sa-korper" class="check">
+            <div class="min-w-0 flex-1">
+              <div class="text-[11px] font-semibold tracking-[0.14em] text-zinc-500 mb-1.5">KÖRPERLICH</div>
+              <p class="text-[18px] sm:text-[19px] leading-[1.6] text-zinc-800">Wie Montag – freie Wahl.</p>
+            </div>
+          </label>
+          <label class="flex items-start gap-4 py-4 cursor-pointer">
+            <input type="checkbox" data-key="klaraweg-sa-geist" class="check">
+            <div class="min-w-0 flex-1">
+              <div class="text-[11px] font-semibold tracking-[0.14em] text-zinc-500 mb-1.5">GEISTIG</div>
+              <p class="text-[18px] sm:text-[19px] leading-[1.6] text-zinc-800">Wie Montag – freie Wahl.</p>
+            </div>
+          </label>
+        </div>
+      </section>
+
+      <!-- Sonntag -->
+      <section id="sonntag" data-day="0" class="card fade bg-white border border-zinc-200 rounded-[28px] p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow">
+        <div class="flex items-start justify-between">
+          <h2 class="text-[30px] sm:text-[36px] font-semibold tracking-tight leading-none">Sonntag</h2>
+          <span data-progress class="mt-1 inline-flex items-center rounded-full bg-zinc-100 px-2.5 py-1 text-[12px] font-medium text-zinc-600 transition-colors">0/3</span>
+        </div>
+        <div class="mt-5 divide-y divide-zinc-100">
+          <label class="flex items-start gap-4 py-4 cursor-pointer">
+            <input type="checkbox" data-key="klaraweg-so-mental" class="check">
+            <div class="min-w-0 flex-1">
+              <div class="text-[11px] font-semibold tracking-[0.14em] text-zinc-500 mb-1.5">MENTAL — GEBOT 7: BEDINGUNGSLOSE LIEBE – SPIEGEL</div>
+              <p class="text-[18px] sm:text-[19px] leading-[1.6] text-zinc-800"><span class="font-semibold">Außen:</span> Stell dich mit deiner Familie oder Freunden vor den Spiegel. Lacht, singt, sagt euch: Ich habe euch lieb.</p>
+              <p class="mt-2 text-[18px] sm:text-[19px] leading-[1.6] text-zinc-800"><span class="font-semibold">Innen:</span> Stell dich 5 Minuten allein vor den Spiegel. Lache, singe, und sag dir: Ich habe dich lieb.</p>
+              <div class="mt-2 text-[14px] sm:text-[15px] leading-[1.5] text-zinc-500">Erinnerung: Wer seinen Schatten ehrt, löst ihn auf.</div>
+            </div>
+          </label>
+          <label class="flex items-start gap-4 py-4 cursor-pointer">
+            <input type="checkbox" data-key="klaraweg-so-korper" class="check">
+            <div class="min-w-0 flex-1">
+              <div class="text-[11px] font-semibold tracking-[0.14em] text-zinc-500 mb-1.5">KÖRPERLICH</div>
+              <p class="text-[18px] sm:text-[19px] leading-[1.6] text-zinc-800">Wie Montag – freie Wahl.</p>
+            </div>
+          </label>
+          <label class="flex items-start gap-4 py-4 cursor-pointer">
+            <input type="checkbox" data-key="klaraweg-so-geist" class="check">
+            <div class="min-w-0 flex-1">
+              <div class="text-[11px] font-semibold tracking-[0.14em] text-zinc-500 mb-1.5">GEISTIG</div>
+              <p class="text-[18px] sm:text-[19px] leading-[1.6] text-zinc-800">Wie Montag – freie Wahl.</p>
+            </div>
+          </label>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="mt-16 sm:mt-24 text-center">
+      <p class="text-[14px] text-zinc-500">Wiederhole den Plan. Klaria ist Zustand, nicht Ziel.</p>
+    </footer>
+  </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const days = ['sonntag','montag','dienstag','mittwoch','donnerstag','freitag','samstag'];
+  const today = days[new Date().getDay()];
+  const todayCard = document.getElementById(today);
+  if (todayCard) {
+    todayCard.classList.add('ring-1','ring-zinc-900');
+  }
+
+  function updateProgress(section){
+    const checks = section.querySelectorAll('input[data-key]');
+    const done = [...checks].filter(c => c.checked).length;
+    const badge = section.querySelector('[data-progress]');
+    if (badge) {
+      badge.textContent = `${done}/3`;
+      badge.classList.toggle('bg-zinc-900', done === 3);
+      badge.classList.toggle('text-white', done === 3);
+      badge.classList.toggle('bg-zinc-100', done !== 3);
+      badge.classList.toggle('text-zinc-600', done !== 3);
+    }
+  }
+
+  document.querySelectorAll('input[data-key]').forEach(cb => {
+    const key = cb.dataset.key;
+    cb.checked = localStorage.getItem(key) === '1';
+    cb.addEventListener('change', () => {
+      localStorage.setItem(key, cb.checked ? '1' : '0');
+      updateProgress(cb.closest('section'));
+    });
+  });
+
+  document.querySelectorAll('section[data-day]').forEach(updateProgress);
+
+  document.getElementById('reset').addEventListener('click', () => {
+    if (confirm('Alle Haken für diese Woche entfernen?')) {
+      document.querySelectorAll('input[data-key]').forEach(cb => {
+        cb.checked = false;
+        localStorage.removeItem(cb.dataset.key);
+      });
+      document.querySelectorAll('section[data-day]').forEach(updateProgress);
+    }
+  });
+
+  document.getElementById('today').addEventListener('click', () => {
+    document.getElementById(today)?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+});
+</script>
+<script>(function(){document.addEventListener("click",function(e){var a=e.target.closest("[data-product-id]");if(!a)return;e.preventDefault();var pid=a.getAttribute("data-product-id");if(pid)parent.postMessage({type:"ecto-artifact-link-click",productId:pid},"*")})})();</script>
+</body>
+</html>
